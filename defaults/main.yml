@@ -1,2 +1,4 @@
 ---
 # defaults file for nginx
+
+nginx_daemon_args: ""
