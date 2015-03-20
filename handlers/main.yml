@@ -4,3 +4,7 @@
 - name: restart nginx
   service: name={{ nginx_service_name }} state=restarted
   tags: nginx
+
+- name: reload nginx
+  service: name={{ nginx_service_name }} state=reloaded
+  tags: nginx

@@ -1,2 +1,7 @@
 ---
 # vars file for nginx (Ubuntu specific)
+
+nginx_pid_file: /var/run/nginx.pid
+nginx_error_log_file: /var/log/nginx/error.log
+nginx_mime_types_file: /etc/nginx/mime.types
+nginx_http_access_log_file: /var/log/nginx/access.log

@@ -1,4 +1,18 @@
 ---
 # defaults file for nginx
 
+nginx_daemon: "on"
 nginx_daemon_args: ""
+nginx_master_process: "on"
+nginx_error_log_level: warn
+nginx_worker_priority: 0
+nginx_worker_processes: 1
+nginx_events_accept_mutex: "on"
+nginx_events_accept_mutex_delay: 500ms
+nginx_events_multi_accept: "off"
+nginx_events_worker_connections: 1024
+nginx_http_default_type: application/octet-stream
+nginx_http_sendfile: "on"
+nginx_http_tcp_nopush: "off"
+nginx_http_keepalive_timeout: 65
+nginx_http_gzip: "off"
