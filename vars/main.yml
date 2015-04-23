@@ -2,7 +2,7 @@
 # vars file for nginx
 
 nginx_packages:
-  - nginx
+  - nginx={{ nginx_version }}*
 nginx_service_name: nginx
 nginx_user: nginx
 nginx_group: nginx
