@@ -1,36 +1,21 @@
 # {{ ansible_managed }}
 
-daemon {{ nginx_daemon }};
+daemon on;
 error_log {{ nginx_error_log_file }} {{ nginx_error_log_level }};
 user {{ nginx_user }} {{ nginx_group }};
-master_process {{ nginx_master_process }};
+master_process on;
 pid {{ nginx_pid_file }};
 worker_priority {{ nginx_worker_priority }};
 worker_processes {{ nginx_worker_processes }};
 
-events {
-    accept_mutex {{ nginx_events_accept_mutex }};
-    accept_mutex_delay {{ nginx_events_accept_mutex_delay }};
-    multi_accept {{ nginx_events_multi_accept }};
-    worker_connections {{ nginx_events_worker_connections }};
-}
-
 http {
     include {{ nginx_mime_types_file }};
-    default_type {{ nginx_http_default_type }};
 
     log_format main '$remote_addr - $remote_user [$time_local] "$request" '
                     '$status $body_bytes_sent "$http_referer" '
                     '"$http_user_agent" "$http_x_forwarded_for"';
 
     access_log {{ nginx_http_access_log_file }} main;
-
-    sendfile {{ nginx_http_sendfile }};
-    tcp_nopush {{ nginx_http_tcp_nopush }};
-
-    keepalive_timeout {{ nginx_http_keepalive_timeout }};
-
-    gzip {{ nginx_http_gzip }};
 
     include /etc/nginx/conf.d/*.conf;
 }

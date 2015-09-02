@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kevin Brebanov
-  description: Installs NGINX
+  description: Installs nginx
   company:
   # Some suggested licenses:
   # - BSD (default)
