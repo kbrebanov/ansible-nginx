@@ -1,6 +1,8 @@
 nginx
 =====
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.nginx-660198.svg)](https://galaxy.ansible.com/list#/roles/4966)
+
 Installs nginx.
 
 Requirements
