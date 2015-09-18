@@ -1,7 +1,7 @@
 nginx
 =====
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.nginx-660198.svg)](https://galaxy.ansible.com/list#/roles/4966)
+[![Ansible Role](https://img.shields.io/ansible/role/4966.svg)](https://galaxy.ansible.com/list#/roles/4966)
 
 Installs nginx.
 
