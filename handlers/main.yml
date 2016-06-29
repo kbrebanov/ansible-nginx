@@ -2,9 +2,17 @@
 # handlers file for nginx
 
 - name: restart nginx
-  service: name={{ nginx_service_name }} state=restarted
-  tags: nginx
+  become: yes
+  service:
+    name: "{{ nginx_service_name }}"
+    state: restarted
+  tags:
+    - nginx
 
 - name: reload nginx
-  service: name={{ nginx_service_name }} state=reloaded
-  tags: nginx
+  become: yes
+  service:
+    name: "{{ nginx_service_name }}"
+    state: reloaded
+  tags:
+    - nginx

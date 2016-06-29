@@ -2,16 +2,28 @@
 # tasks file for nginx (Ubuntu specific)
 
 - name: Add nginx APT repository key
-  apt_key: url=http://nginx.org/keys/nginx_signing.key state=present
-  tags: nginx
+  become: yes
+  apt_key:
+    url: http://nginx.org/keys/nginx_signing.key
+    state: present
+  tags:
+    - nginx
 
 - name: Add nginx APT repository
-  apt_repository: >
-    repo='deb http://nginx.org/packages/ubuntu/ trusty nginx'
-    state=present
-  tags: nginx
+  become: yes
+  apt_repository:
+    repo: 'deb http://nginx.org/packages/ubuntu/ trusty nginx'
+    state: present
+  tags:
+    - nginx
 
 - name: Install nginx packages
-  apt: name={{ item }} state=present update_cache=yes
-  with_items: nginx_packages
-  tags: nginx
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ nginx_packages }}"
+  tags:
+    - nginx
