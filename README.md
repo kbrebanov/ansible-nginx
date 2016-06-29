@@ -31,10 +31,10 @@ Example Playbook
 ----------------
 
 Install nginx
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.nginx }
+    - kbrebanov.nginx
 ```
 
 License
