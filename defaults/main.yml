@@ -1,7 +1,7 @@
 ---
 # defaults file for nginx
 
-nginx_version: 1.8.0
+nginx_version: 1.10.1
 nginx_daemon_args: ""
 nginx_error_log_level: warn
 nginx_worker_priority: 0

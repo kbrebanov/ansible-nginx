@@ -15,7 +15,7 @@ Role Variables
 
 | Name                   | Default | Description                                          |
 |:-----------------------|:--------|:-----------------------------------------------------|
-| nginx_version          | 1.8.0   | Version of nginx to install                          |
+| nginx_version          | 1.10.1  | Version of nginx to install                          |
 | nginx_daemon_args      | ""      | Additional options that are passed to nginx          |
 | nginx_error_log_level  | warn    | Level of logging                                     |
 | nginx_worker_priority  | 0       | Defines the scheduling priority for worker processes |
