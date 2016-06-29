@@ -2,7 +2,17 @@
 # defaults file for nginx
 
 nginx_version: 1.10.1
+
 nginx_daemon_args: ""
 nginx_error_log_level: warn
 nginx_worker_priority: 0
 nginx_worker_processes: 1
+
+nginx_events_worker_connections: 1024
+
+nginx_http_default_type: application/octet-stream
+nginx_http_keepalive_timeout: 65
+nginx_http_sendfile: 'on'
+nginx_http_tcp_nopush: 'off'
+
+nginx_gzip: 'off'
