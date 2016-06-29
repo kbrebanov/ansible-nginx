@@ -1,7 +1,7 @@
 nginx
 =====
 
-[![Ansible Role](https://img.shields.io/ansible/role/4966.svg)](https://galaxy.ansible.com/list#/roles/4966)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-nginx.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-nginx)
 
 Installs nginx.
 
